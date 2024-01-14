@@ -1,43 +1,16 @@
 import Head from "next/head";
-import Image from "next/image";
+
 import { Anchor } from "../../components/anchor";
 import { Footer } from "../../components/footer";
 import { Heading } from "../../components/heading";
 import { Example } from "../../components/example";
 import { Text } from "../../components/text";
 import { Topbar } from "../../components/topbar";
-import { Button } from "../../components/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "../../components/ui/dialog"
-import { Input } from "../../components/input"
-import { Label } from "../../components/label"
+
  
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "../../components/card"
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "../../components/select"
+
 import WebGLComponent from '../app';
-import ReactDOM from 'react-dom';
+
 
 const items = [
   {
@@ -52,12 +25,6 @@ const items = [
   },
 ];
 
-interface ExampleProps {
-  id: string;
-  name: string;
-  className?: string;
-  author: string;
-}
 
 const title = "Products";
 const description = "The cheapest and greatest clients on the market";
@@ -90,9 +57,9 @@ const Examples = () => {
                 href="https://discord.gg/Uaru7PMABH"
                 target="_blank"
               >
-                Hover
+                Click
               </Anchor>{" "}
-              over the clients to purchase, by purchasing you agree to our  
+               the client to purchase, by purchasing you agree to our  
               <Anchor
                 appearance="white"
                 href="https://discord.com/channels/1190154510249758910/1190393014368088074/1190439296700788786"

@@ -72,22 +72,22 @@ const WebGLComponent: React.FC = () => {
     `;
 
     // Compile shaders and create shader program
-    function compileShader(source: string, type: number): WebGLShader {
+    function compileShader(gl: WebGLRenderingContext, source: string, type: number): WebGLShader {
       const shader = gl.createShader(type)!;
       gl.shaderSource(shader, source);
       gl.compileShader(shader);
-
+    
       if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
         console.error('Shader compilation error: ' + gl.getShaderInfoLog(shader));
         gl.deleteShader(shader);
         throw new Error('Failed to compile shader.');
       }
-
+    
       return shader;
     }
 
-    const vertexShader = compileShader(vsSource, gl.VERTEX_SHADER);
-    const fragmentShader = compileShader(fsSource, gl.FRAGMENT_SHADER);
+    const vertexShader = compileShader(gl,vsSource, gl.VERTEX_SHADER);
+    const fragmentShader = compileShader(gl,fsSource, gl.FRAGMENT_SHADER);
 
     const shaderProgram = gl.createProgram()!;
     gl.attachShader(shaderProgram, vertexShader);
@@ -105,7 +105,7 @@ const WebGLComponent: React.FC = () => {
     const timeLocation = gl.getUniformLocation(shaderProgram, 'time');
     const resolutionLocation = gl.getUniformLocation(shaderProgram, 'resolution');
 
-    let startTime = Date.now();
+    const startTime = Date.now();
 
     // Set up geometry buffers
     const positionBuffer = gl.createBuffer()!;
@@ -128,7 +128,7 @@ const WebGLComponent: React.FC = () => {
     const modelViewUniformLocation = gl.getUniformLocation(shaderProgram, 'uModelViewMatrix');
     const projectionUniformLocation = gl.getUniformLocation(shaderProgram, 'uProjectionMatrix');
 
-    function render() {
+    function render(gl: WebGLRenderingContext) {
       const currentTime = (Date.now() - startTime) * 0.001; // Convert to seconds
       gl.uniform1f(timeLocation, currentTime);
       
@@ -149,10 +149,10 @@ const WebGLComponent: React.FC = () => {
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 
       // Request the next frame
-      requestAnimationFrame(render);
+      requestAnimationFrame(() => render(gl));
     }
 
-    render();
+    render(gl);
 
   }, []);
 

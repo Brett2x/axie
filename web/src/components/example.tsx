@@ -12,7 +12,6 @@ interface ExampleProps {
   author: string;
 }
 
-const GITHUB_URL = "https://t.me/BrettXY";
 
 export const Example: React.FC<Readonly<ExampleProps>> = ({
   className,

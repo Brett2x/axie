@@ -22,6 +22,8 @@ const iOsHeight = plugin(function ({ addUtilities }) {
   addUtilities(utilities, ['responsive']);
 });
 
+
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -151,7 +153,7 @@ module.exports = {
           '100%': { strokeDashoffset: 0 },
         },
         animation: {
-          shine: 'shine 5s infinite',
+          shine: 'shine 4s ease-in-out infinite',
         }
       },
     },
