@@ -31,5 +31,8 @@
       "process@0.11.10": "patches/process@0.11.10.patch",
       "tailwindcss@3.3.2": "patches/tailwindcss@3.3.2.patch"
     }
+  },
+  "dependencies": {
+    "next": "^14.0.4"
   }
 }
