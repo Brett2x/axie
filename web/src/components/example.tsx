@@ -12,7 +12,7 @@ interface ExampleProps {
   author: string;
 }
 
-const GITHUB_URL = "https://demo.react.email/preview";
+const GITHUB_URL = "https://t.me/BrettXY";
 
 export const Example: React.FC<Readonly<ExampleProps>> = ({
   className,
@@ -28,7 +28,7 @@ export const Example: React.FC<Readonly<ExampleProps>> = ({
       "focus:bg-gradientHover focus:ring-white/20",
       className,
     )}
-    href={`${GITHUB_URL}/${id}`}
+    href={`/${id}`}
     target="_blank"
     {...props}
   >
@@ -48,7 +48,7 @@ export const Example: React.FC<Readonly<ExampleProps>> = ({
           alt={author}
           className="rounded-full"
           height="24"
-          src={`https://github.com/${author}.png`}
+          src={`/static/examples/${id}.png`}
           width="24"
         />
         <Text>{author}</Text>

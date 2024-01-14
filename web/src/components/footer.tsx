@@ -10,33 +10,33 @@ export const Footer: React.FC = () => (
       <Anchor
         appearance="white"
         className="inline-flex items-center gap-2"
-        href="https://twitter.com/bukinoshita"
+        href="https://t.me/BrettXY"
         target="_blank"
       >
         <Image
           alt=""
           className="border-slate-7 inline-block rounded-full border"
           height="20"
-          src="/static/bu.jpg"
+          src="/static/brett.png"
           width="20"
         />
-        Bu Kinoshita
+        Brett
       </Anchor>{" "}
-      and{" "}
+      and by{" "}
       <Anchor
         appearance="white"
         className="inline-flex items-center gap-2"
-        href="https://twitter.com/zenorocha"
+        href="https://t.me/bewolking"
         target="_blank"
       >
         <Image
           alt=""
           className="border-slate-7 inline-block rounded-full border"
           height="20"
-          src="/static/zeno.jpg"
+          src="/static/zoid.png"
           width="20"
         />
-        Zeno Rocha
+        Zoid
       </Anchor>
     </Text>
   </footer>

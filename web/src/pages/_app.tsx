@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "./style.css"
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import type { AppProps } from "next/app";
@@ -18,7 +19,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <link href="/static/favicon.svg" rel="icon" type="image/svg+xml" />
         <link href="/static/apple-touch-icon.png" rel="apple-touch-icon" />
         <meta
-          content="https://react.email/static/cover.png"
+          content="."
           name="twitter:image"
         />
         <meta content="summary_large_image" name="twitter:card" />

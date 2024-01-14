@@ -39,7 +39,7 @@ const getAppearance = (appearance: Appearance | undefined) => {
   switch (appearance) {
     case "cyan":
     case undefined:
-      return "bg-cyan-2 text-cyan-11 border-cyan-6";
+      return "bg-purple-2 text-purple-300 border-purple-500";
     default:
       unreachable(appearance);
   }

@@ -1,44 +1,23 @@
 module.exports = {
-  reactStrictMode: true,
   async redirects() {
     return [
       {
-        source: '/discord',
-        destination: 'https://discord.com/invite/n2pWEjjNnD',
-        permanent: true,
-      },
-    ];
-  },
-  async rewrites() {
-    return [
-      {
-        source: '/docs',
-        destination: 'https://react-email.mintlify.com/docs',
+        source: '/nova',
+        destination: 'https://buy.stripe.com/7sIdRPfcM3m63jGfZb',
+        permanent: false,
       },
       {
-        source: '/docs/:match*',
-        destination: 'https://react-email.mintlify.com/docs/:match*',
+        source: '/adapt',
+        destination: 'https://buy.stripe.com/9AQ6pnaWw2i2dYkfZ3',
+        permanent: false,
       },
-    ];
-  },
-  async headers() {
-    return [
-      {
-        source: '/api/:path*',
-        headers: [
-          { key: 'Access-Control-Allow-Credentials', value: 'true' },
-          { key: 'Access-Control-Allow-Origin', value: '*' },
-          {
-            key: 'Access-Control-Allow-Methods',
-            value: 'GET,OPTIONS,PATCH,DELETE,POST,PUT',
-          },
-          {
-            key: 'Access-Control-Allow-Headers',
-            value:
-              'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
-          },
-        ],
-      },
+      // Add more redirects as needed
+      // {
+      //   source: '/source-path',
+      //   destination: '/destination-path',
+      //   permanent: true,
+      // },
     ];
   },
 };
+

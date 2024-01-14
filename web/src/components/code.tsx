@@ -63,8 +63,8 @@ export const Code: React.FC<Readonly<CodeProps>> = ({
           style={{
             lineHeight: "130%",
             background:
-              "linear-gradient(145.37deg, rgba(255, 255, 255, 0.09) -8.75%, rgba(255, 255, 255, 0.027) 83.95%)",
-            boxShadow: "rgb(0 0 0 / 10%) 0px 5px 30px -5px",
+              "linear-gradient(245.37deg, rgba(28,11,27, 0.09) -8.75%, rgba(84, 33, 81, 0.027) 83.95%)",
+            boxShadow: "rgb(250 50 110 / 5%) 0px 5px 30px -5px",
           }}
         >
           <IconButton
